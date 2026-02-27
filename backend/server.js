@@ -11,7 +11,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',
   'https://gst-reconciliation.vercel.app',
-  'https://gst-reconciliation-harshithsangu.vercel.app',
+  'https://gst-reconciliation-itr2ztecg-harshith-sangus-projects.vercel.app',
 ];
 
 app.use(cors({
@@ -26,6 +26,8 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 }));
+
+app.options('*', cors());
 
 app.use(express.json());
 
